@@ -1,0 +1,15 @@
+C:\Repositories\Exercises23-30_String_Processing\Exercises23-30_String_Processing\bin\Debug\net6.0\Exercises23-30_String_Processing.exe
+C:\Repositories\Exercises23-30_String_Processing\Exercises23-30_String_Processing\bin\Debug\net6.0\Exercises23-30_String_Processing.deps.json
+C:\Repositories\Exercises23-30_String_Processing\Exercises23-30_String_Processing\bin\Debug\net6.0\Exercises23-30_String_Processing.runtimeconfig.json
+C:\Repositories\Exercises23-30_String_Processing\Exercises23-30_String_Processing\bin\Debug\net6.0\Exercises23-30_String_Processing.dll
+C:\Repositories\Exercises23-30_String_Processing\Exercises23-30_String_Processing\bin\Debug\net6.0\Exercises23-30_String_Processing.pdb
+C:\Repositories\Exercises23-30_String_Processing\Exercises23-30_String_Processing\obj\Debug\net6.0\Exercises23-30_String_Processing.csproj.AssemblyReference.cache
+C:\Repositories\Exercises23-30_String_Processing\Exercises23-30_String_Processing\obj\Debug\net6.0\Exercises23-30_String_Processing.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repositories\Exercises23-30_String_Processing\Exercises23-30_String_Processing\obj\Debug\net6.0\Exercises23-30_String_Processing.AssemblyInfoInputs.cache
+C:\Repositories\Exercises23-30_String_Processing\Exercises23-30_String_Processing\obj\Debug\net6.0\Exercises23-30_String_Processing.AssemblyInfo.cs
+C:\Repositories\Exercises23-30_String_Processing\Exercises23-30_String_Processing\obj\Debug\net6.0\Exercises23-30_String_Processing.csproj.CoreCompileInputs.cache
+C:\Repositories\Exercises23-30_String_Processing\Exercises23-30_String_Processing\obj\Debug\net6.0\Exercises23-30_String_Processing.dll
+C:\Repositories\Exercises23-30_String_Processing\Exercises23-30_String_Processing\obj\Debug\net6.0\refint\Exercises23-30_String_Processing.dll
+C:\Repositories\Exercises23-30_String_Processing\Exercises23-30_String_Processing\obj\Debug\net6.0\Exercises23-30_String_Processing.pdb
+C:\Repositories\Exercises23-30_String_Processing\Exercises23-30_String_Processing\obj\Debug\net6.0\Exercises23-30_String_Processing.genruntimeconfig.cache
+C:\Repositories\Exercises23-30_String_Processing\Exercises23-30_String_Processing\obj\Debug\net6.0\ref\Exercises23-30_String_Processing.dll

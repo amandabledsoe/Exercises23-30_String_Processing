@@ -67,12 +67,40 @@ static void Introduction()
     Console.ReadLine();
     Console.Clear();
 }
+static void PrintMenuOfExercises()
+{
+    Console.WriteLine("EXERCISE MENU:");
+    Console.WriteLine("");
+    Console.WriteLine("----------------------------------------------------------------------------------------------------");
+    Console.WriteLine("Exercise 23: \tPrompt the user to enter a string.  Extract and output the first ten characters of the string.");
+    Console.WriteLine("----------------------------------------------------------------------------------------------------");
+    Console.WriteLine("Exercise 24: \tPrompt the user to enter a string.  Extract and output the last ten characters of the string.");
+    Console.WriteLine("----------------------------------------------------------------------------------------------------");
+    Console.WriteLine("Exercise 25: \tPrompt the user to enter a sentence.  Split the sentence into individual words and ");
+    Console.WriteLine(String.Format("{0,16}{1,0}", "", "display each word on its own line."));
+    Console.WriteLine("----------------------------------------------------------------------------------------------------");
+    Console.WriteLine("Exercise 26: \tPrompt the user to enter text.  Count and output how many vowels are in the string.");
+    Console.WriteLine("----------------------------------------------------------------------------------------------------");
+    Console.WriteLine("Exercise 27: \tPrompt the user to enter text.  Count and output how many consonants are in the string.");
+    Console.WriteLine("----------------------------------------------------------------------------------------------------");
+    Console.WriteLine("Exercise 28: \tPrompt the user to enter text.  Remove all the vowels and output the text.");
+    Console.WriteLine("----------------------------------------------------------------------------------------------------");
+    Console.WriteLine("Exercise 29: \tPrompt the user to enter text.  Remove all the vowels in the middle of the word, ");
+    Console.WriteLine(String.Format("{0,16}{1,0}", "", "but leave any that start or end the word."));
+    Console.WriteLine("----------------------------------------------------------------------------------------------------");
+    Console.WriteLine("Exercise 30: \tPrompt the user to enter text.  Reverse the text.");
+    Console.WriteLine("----------------------------------------------------------------------------------------------------");
+    Console.WriteLine("");
+}
 static int GetExerciseNumber()
 {
     bool gettingUserNumber = true;
     while (gettingUserNumber)
     {
+        PrintMenuOfExercises();
+        Console.WriteLine("");
         Console.WriteLine("Which exercise would you like to run?");
+        Console.WriteLine("");
         Console.Write("Enter a number between 23 and 30 inclusive: ");
         string userInput = Console.ReadLine();
         bool isANumber = int.TryParse(userInput, out int exerciseNumber);
@@ -105,7 +133,11 @@ static void DoExercise23()
     bool doingExercise23 = true;
     while (doingExercise23)
     {
-        Console.WriteLine("This is meant to represent exercise 23.");
+        Console.WriteLine("Enter a string and I will return the first 10 characters of whatever you type.");
+        Console.Write("Your Entry: ");
+        string userString = Console.ReadLine();
+        Console.WriteLine("");
+        Console.WriteLine($"The first 10 characters are: {userString.Substring(0, 10)}");
         Console.WriteLine("");
         Console.WriteLine("Press Enter to Continue.");
         Console.ReadLine();
@@ -126,7 +158,11 @@ static void DoExercise24()
     bool doingExercise24 = true;
     while (doingExercise24)
     {
-        Console.WriteLine("This is meant to represent exercise 24.");
+        Console.WriteLine("Enter a string and I will return the  10 characters of whatever you type.");
+        Console.Write("Your Entry: ");
+        string userString = Console.ReadLine();
+        Console.WriteLine("");
+        Console.WriteLine($"The last 10 characters are: {userString.Substring(userString.Length-10)}");
         Console.WriteLine("");
         Console.WriteLine("Press Enter to Continue.");
         Console.ReadLine();
@@ -148,7 +184,16 @@ static void DoExercise25()
     bool doingExercise25 = true;
     while (doingExercise25)
     {
-        Console.WriteLine("This is meant to represent exercise 25.");
+        char[] toRemove = new char[] {' ','.'};
+        Console.WriteLine("Enter a string and I will print all of the words onto their own line.");
+        Console.Write("Your Entry: ");
+        string userString = Console.ReadLine();
+        Console.WriteLine("");
+        string[] words = userString.Split(toRemove, StringSplitOptions.RemoveEmptyEntries);
+        foreach(string word in words)
+        {
+            Console.WriteLine(word);
+        }
         Console.WriteLine("");
         Console.WriteLine("Press Enter to Continue.");
         Console.ReadLine();
@@ -169,8 +214,31 @@ static void DoExercise26()
     bool doingExercise26 = true;
     while (doingExercise26)
     {
-        Console.WriteLine("This is meant to represent exercise 26.");
+        char[] toRemove = new char[] { ' ', '.', ',' };
+        char[] vowels = new char[] {'a','e','i','o','u','y','A', 'E', 'I', 'O', 'U', 'Y'};
+        List<char> allVowels = new List<char>();
+        Console.WriteLine("Enter a string and I will tell you how many vowels were included in your string.");
+        Console.Write("Your Entry: ");
+        string userString = Console.ReadLine();
         Console.WriteLine("");
+        string[] words = userString.Split(toRemove, StringSplitOptions.RemoveEmptyEntries);
+        foreach (string word in words)
+        {
+            char[] charWord = word.ToCharArray();
+            foreach(char letter in charWord)
+            {
+                for (int i = 0; i < vowels.Length; i++)
+                {
+                    if (letter == vowels[i])
+                    {
+                        allVowels.Add(letter);
+                    }
+                }
+            }
+        }
+        Console.WriteLine($"The number of vowels in your phrase is {allVowels.Count}.");
+        Console.WriteLine("");
+        allVowels.Clear();
         Console.WriteLine("Press Enter to Continue.");
         Console.ReadLine();
         Console.Clear();
@@ -190,7 +258,27 @@ static void DoExercise27()
     bool doingExercise27 = true;
     while (doingExercise27)
     {
-        Console.WriteLine("This is meant to represent exercise 27.");
+        char[] toRemove = new char[] { ' ', '.', ',' };
+        List<char> allConsonants = new List<char>();
+        Console.WriteLine("Enter a string and I will tell you how many consonants were included in your string.");
+        Console.Write("Your Entry: ");
+        string userString = Console.ReadLine();
+        Console.WriteLine("");
+        string[] words = userString.Split(toRemove, StringSplitOptions.RemoveEmptyEntries);
+        foreach (string word in words)
+        {
+            char[] charWord = word.ToCharArray();
+            foreach (char letter in charWord)
+            {
+                if (letter != 'a' && letter != 'e' && letter != 'i' && letter != 'o' && letter != 'u' && letter != 'y' &&
+                    letter != 'A' && letter != 'E' && letter != 'I' && letter != 'P' && letter != 'U' && letter != 'Y')
+                {
+                    allConsonants.Add(letter);
+                }
+            }
+        }
+        Console.WriteLine($"The number of consonants in your phrase is {allConsonants.Count}.");
+        allConsonants.Clear();
         Console.WriteLine("");
         Console.WriteLine("Press Enter to Continue.");
         Console.ReadLine();
