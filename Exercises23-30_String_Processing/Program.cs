@@ -46,7 +46,7 @@ while (runningProgram)
         }
         runningProgram = RunProgramAgainPrompt();
     }
-    else if (exerciseNumber < 23 || exerciseNumber > 23)
+    else if (exerciseNumber < 23 || exerciseNumber > 30)
     {
         Console.WriteLine("");
         Console.WriteLine("Sorry, that number appears to be out of the specified range. Please try again.");
@@ -299,7 +299,34 @@ static void DoExercise28()
     bool doingExercise28 = true;
     while (doingExercise28)
     {
-        Console.WriteLine("This is meant to represent exercise 28.");
+        char[] vowels = {'a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y'};
+        List<char> redoneWords = new List<char>();
+        Console.WriteLine("Enter a phrase, and I will display your phrase back to you without the vowels.");
+        Console.Write("Your Entry: ");
+        string userString = Console.ReadLine();
+        char[] userLetters = userString.ToCharArray();
+
+        for (int i = 0; i < userLetters.Length; i++)
+        {
+            if (vowels.Contains(userLetters[i]))
+            {
+
+            }
+            else
+            {
+                redoneWords.Add(userLetters[i]);
+            }
+        }
+        Console.WriteLine("");
+        Console.WriteLine("your phrase without the vowels is: ");
+        Console.WriteLine("");
+        foreach (var item in redoneWords)
+        {
+            Console.Write(item);
+        }
+        redoneWords.Clear();
+        Console.WriteLine("");
+
         Console.WriteLine("");
         Console.WriteLine("Press Enter to Continue.");
         Console.ReadLine();
@@ -321,7 +348,34 @@ static void DoExercise29()
     bool doingExercise29 = true;
     while (doingExercise29)
     {
-        Console.WriteLine("This is meant to represent exercise 29.");
+        char[] separators = new char[] { ' ', '.', ',' };
+        char[] vowels = { 'a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y' };
+        List<char> redoneWords = new List<char>();
+        Console.WriteLine("Enter a phrase, and I will display your phrase back to you without the consonants.");
+        Console.Write("Your Entry: ");
+        string userString = Console.ReadLine();
+        char[] userLetters = userString.ToCharArray();
+
+        for (int i = 0; i < userLetters.Length; i++)
+        {
+            if (!vowels.Contains(userLetters[i]) && !separators.Contains(userLetters[i]))
+            {
+
+            }
+            else
+            {
+                redoneWords.Add(userLetters[i]);
+            }
+        }
+        Console.WriteLine("");
+        Console.WriteLine("your phrase without the consonants is: ");
+        Console.WriteLine("");
+        foreach (var item in redoneWords)
+        {
+            Console.Write(item);
+        }
+        redoneWords.Clear();
+        Console.WriteLine("");
         Console.WriteLine("");
         Console.WriteLine("Press Enter to Continue.");
         Console.ReadLine();
@@ -342,7 +396,25 @@ static void DoExercise30()
     bool doingExercise30 = true;
     while (doingExercise30)
     {
-        Console.WriteLine("This is meant to represent exercise 30.");
+        List<char> backwardPhrase = new List<char>();
+        Console.WriteLine("Enter a phrase, and I will display your phrase back to you backwards.");
+        Console.Write("Your Entry: ");
+        string userString = Console.ReadLine();
+        char[] userLetters = userString.ToCharArray();
+
+        for (int i = userLetters.Length-1; i >= 0; i--)
+        {
+            backwardPhrase.Add(userLetters[i]);
+        }
+        Console.WriteLine("");
+        Console.WriteLine("your phrase backwards is: ");
+        Console.WriteLine("");
+        foreach (var item in backwardPhrase)
+        {
+            Console.Write(item);
+        }
+        backwardPhrase.Clear();
+        Console.WriteLine("");
         Console.WriteLine("");
         Console.WriteLine("Press Enter to Continue.");
         Console.ReadLine();
